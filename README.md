@@ -1,2 +1,1 @@
-a functional calculator using jquery 
-#needs to be responsive
+a functional responsive calculator using jquery 
