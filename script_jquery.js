@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     const $input = $('#inputxt');
     const $clearBtn = $('#clear');
     const $delBtn = $('#del');
@@ -9,7 +8,7 @@ $(document).ready(function () {
 
     $clearBtn.click(function() {
         $input.val('');
-    })
+    });
 
     $delBtn.click(function () {
         $input.val(function (_, value) {
@@ -18,21 +17,21 @@ $(document).ready(function () {
     });
 
     $equalBtn.click(function() {
-        const $expression = $input.val();
-        const $result = eval($expression);
-        $input.val($result);   
-     })
+        const expression = $input.val();
+        const result = eval(expression);
+        $input.val(result);   
+    });
 
-     $numBtns.on('click', addNumber);
-    
-     $opBtns.on('click', addOperator);
+    $numBtns.on('click', addNumber);
+    $opBtns.on('click', addOperator);
 
-     function addNumber(e) {
-        const $num = $(e.target).text();
-        $input.val($input.val() + $num);
-      }
-      function addOperator(e) {
-        const $op = $(e.target).text();
-        $input.val($input.val() + $op);
+    function addNumber(e) {
+        const num = $(e.target).text();
+        $input.val($input.val() + num);
     }
-  });
+
+    function addOperator(e) {
+        const op = $(e.target).text();
+        $input.val($input.val() + op);
+    }
+});
